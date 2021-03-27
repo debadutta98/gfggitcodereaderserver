@@ -2,6 +2,7 @@ const express=require('express');
 var cors = require('cors')
 const {Base64} = require('js-base64');
 const app=express();
+const PORT=(process.env.PORT || 3000);
 const { Octokit } = require("@octokit/core");
 const bodyparser=require('body-parser');
 app.use(cors());
@@ -276,6 +277,6 @@ catch(err)
 res.json({status:404});
 }
 }
-app.listen((process.env.PORT || 3000),function(){
+app.listen(PORT,function(){
   console.log('connect to server');
 });
