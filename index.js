@@ -11,7 +11,7 @@ app.use(express.json({
 }));
 app.use(bodyparser.urlencoded({ extended: true }));
 app.get('/',function(req,res){
-  res.send('HEllo');
+  res.sendFile(__dirname + '/index.html');
 });
 app.post('/create/repo',async function(req,res){
   try{
@@ -276,6 +276,6 @@ catch(err)
 res.json({status:404});
 }
 }
-app.listen(process.env.PORT || 3000,function(){
+app.listen((process.env.PORT || 3000),function(){
   console.log('connect to server');
 });
