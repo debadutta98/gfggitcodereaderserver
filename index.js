@@ -1,6 +1,7 @@
 const express=require('express');
 var cors = require('cors')
 const {Base64} = require('js-base64');
+const path = require('path');
 const app=express();
 const PORT=(process.env.PORT || 3000);
 const { Octokit } = require("@octokit/core");
@@ -11,6 +12,7 @@ app.use(express.json({
   type: ['application/json', 'text/plain']
 }));
 app.use(bodyparser.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname,'public')));
 app.get('/',function(req,res){
   res.sendFile(__dirname + '/index.html');
 });
