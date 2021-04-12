@@ -188,7 +188,7 @@ if(path && repoPath)
     repo:repo,
     path:'README.md'
 });
-var str='\n'+'**GeeksForGeeks Solutions**<hr/>'+'\n'+'Manage by [gfggit](gfggit.com)'+'\n'+'|Slno.|Title|Level|Runtime|Language|'+'\n'+'|--|--|--|--|--|';
+var str='\n'+'**GeeksForGeeks Solutions**<hr/>'+'\n'+'Manage by [gfggit](https://microsoftedge.microsoft.com/addons/detail/gfggit/iapceejfndndbpocjoiialfjlknhhgjb)'+'\n'+'|Slno.|Title|Level|Runtime|Language|'+'\n'+'|--|--|--|--|--|';
 //|${1}|${title}|${type}|${time}|${path}
 if(typeof(commit)!=='undefined')
 {
